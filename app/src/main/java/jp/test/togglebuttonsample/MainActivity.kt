@@ -15,5 +15,9 @@ class MainActivity : AppCompatActivity() {
             val toggle = Toggle(1 + it, null, "test$it")
             toggle_button_layout1.addToggle(toggle)
         }
+
+        toggle_button_layout1.onToggledListener = { _, toggle, selected ->
+            text1.text = "id:${toggle.id}, selected:$selected"
+        }
     }
 }
