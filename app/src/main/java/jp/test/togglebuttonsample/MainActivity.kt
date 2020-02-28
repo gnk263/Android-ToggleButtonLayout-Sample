@@ -19,5 +19,8 @@ class MainActivity : AppCompatActivity() {
         toggle_button_layout1.onToggledListener = { _, toggle, selected ->
             text1.text = "id:${toggle.id}, selected:$selected"
         }
+
+        toggle_button_layout1.setToggled(1, true)
+        text1.text = "id:1, selected:true"
     }
 }
